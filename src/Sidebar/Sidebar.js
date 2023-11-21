@@ -2,6 +2,11 @@ import React from 'react';
 import { Sidebar, Menu } from 'semantic-ui-react';
 
 const SidebarComponent = () => {
+    const style = {
+        sidebar: {
+            marginTop: "40px"
+        }
+    }
     return (
         <Sidebar
             as={Menu}
@@ -12,7 +17,9 @@ const SidebarComponent = () => {
             visible
             width='thin'
         >
-            <Menu.Item>
+            <Menu.Item
+            style={style.sidebar}
+            >
                 <Menu.Header>Data Metrics</Menu.Header>
                 <Menu.Menu>
                     <Menu.Item>Hash Rate</Menu.Item>

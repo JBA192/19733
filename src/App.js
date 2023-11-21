@@ -4,8 +4,8 @@ import Navigation from './Navigation/Navigation';
 function App() {
   return (
     <div className="App">
-        <Sidebar />
         <Navigation />
+        <Sidebar />
        
     </div>
   );

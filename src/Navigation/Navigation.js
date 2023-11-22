@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { Menu } from "semantic-ui-react";
 
-function Navigation() {
+function Navigation({ activeMenu, setActiveMenu }) {
 
-    const [activeItem, setActiveItem] = useState("");
-
-    const handleItemClick = ({ name }) => {
-        setActiveItem(name);
+    const handleMenuClick = (_, { name }) => {
+        setActiveMenu(name);
     }
 
     return (
@@ -15,12 +12,12 @@ function Navigation() {
                 <Menu.Menu position="right">
                     <Menu.Item
                         name="paper"
-                        active={activeItem === "paper"}
-                        onClick={handleItemClick} />
+                        active={activeMenu === "paper"}
+                        onClick={handleMenuClick} />
                     <Menu.Item
                         name="about"
-                        active={activeItem === "about"}
-                        onClick={handleItemClick} />
+                        active={activeMenu === "about"}
+                        onClick={handleMenuClick} />
                 </Menu.Menu>
             </Menu>
         </>

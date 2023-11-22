@@ -2,7 +2,7 @@ import React from 'react';
 import { Sidebar, Menu } from 'semantic-ui-react';
 
 function SidebarComponent({ activeMenu, setActiveMenu }) {
-    const handleItemClick = (_, { name }) => {
+    const handleMenuClick = (_, { name }) => {
         setActiveMenu(name);
     }
 
@@ -14,27 +14,75 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
             inverted
             vertical
             visible
-            width='thin'
+            style={style.width}
         >
             <Menu.Item
                 style={style.sidebar}
             >
-                <Menu.Header>Data Metrics</Menu.Header>
+                <Menu.Header>
+                    <h3>Data Metrics</h3>
+                </Menu.Header>
                 <Menu.Menu>
-                    <Menu.Item active={activeMenu === "hashRate"} name="hashRate" onClick={handleItemClick}>Hash Rate</Menu.Item>
-                    <Menu.Item active={activeMenu === "nodeDistribution"} name="nodeDistribution" onClick={handleItemClick}>Node Distribution</Menu.Item>
-                    <Menu.Item active={activeMenu === "miningPools"} name="miningPools" onClick={handleItemClick}>Mining Pools</Menu.Item>
-                    <Menu.Item active={activeMenu === "clients"} name="clients" onClick={handleItemClick}>Clients</Menu.Item>
-                    <Menu.Item active={activeMenu === "governance"} name="governance" onClick={handleItemClick}>Governance</Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "hashRate"}
+                        name="hashRate"
+                        onClick={handleMenuClick}><h5>
+                            Hash Rate</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "nodeDistribution"}
+                        name="nodeDistribution"
+                        onClick={handleMenuClick}>
+                        <h5>Node Distribution</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "miningPools"}
+                        name="miningPools" onClick={handleMenuClick}>
+                        <h5>Mining Pools</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "clients"}
+                        name="clients"
+                        onClick={handleMenuClick}>
+                        <h5>Clients</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "governance"}
+                        name="governance"
+                        onClick={handleMenuClick}>
+                        <h5>Governance</h5>
+                    </Menu.Item>
                 </Menu.Menu>
             </Menu.Item>
             <Menu.Item>
-                <Menu.Header>Cryptocurrencies</Menu.Header>
+                <Menu.Header>
+                    <h3>Cryptocurrencies</h3>
+                </Menu.Header>
                 <Menu.Menu>
-                    <Menu.Item active={activeMenu === "bitcoin"} name="bitcoin" onClick={handleItemClick} >Bitcoin</Menu.Item>
-                    <Menu.Item active={activeMenu === "ethereum"} name="ethereum" onClick={handleItemClick}>Ethereum</Menu.Item>
-                    <Menu.Item active={activeMenu === "solana"} name="solana" onClick={handleItemClick}>Solana</Menu.Item>
-                    <Menu.Item active={activeMenu === "binance"} name="binance" onClick={handleItemClick}>Binance</Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "bitcoin"}
+                        name="bitcoin"
+                        onClick={handleMenuClick}>
+                        <h5>Bitcoin</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "ethereum"}
+                        name="ethereum"
+                        onClick={handleMenuClick}>
+                        <h5>Ethereum</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "solana"}
+                        name="solana"
+                        onClick={handleMenuClick}>
+                        <h5>Solana</h5>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeMenu === "binance"}
+                        name="binance"
+                        onClick={handleMenuClick}>
+                        <h5>Binance</h5>
+                    </Menu.Item>
                 </Menu.Menu>
             </Menu.Item>
         </Sidebar>
@@ -44,6 +92,9 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
 const style = {
     sidebar: {
         marginTop: "40px"
+    },
+    width: {
+        width: "200px"
     }
 }
 

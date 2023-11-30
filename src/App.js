@@ -3,6 +3,15 @@ import Sidebar from './Sidebar/Sidebar';
 import Navigation from './Navigation/Navigation';
 import { Grid } from 'semantic-ui-react';
 import NodeDistribution from './Data Metrics/NodeDistribution';
+import Clients from './Data Metrics/Clients';
+import Governance from './Data Metrics/Governance';
+import HashRate from './Data Metrics/HashRate';
+import MiningPools from './Data Metrics/MiningPools';
+import Binance from './CryptoCurrencies/Binance';
+import Bitcoin from './CryptoCurrencies/Bitcoin';
+import Ethereum from './CryptoCurrencies/Ethereum';
+import Solana from './CryptoCurrencies/Solana';
+import Dogecoin from './CryptoCurrencies/Dogecoin';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -15,7 +24,16 @@ function App() {
           <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         </Grid.Column>
         <Grid.Column width={13}>
-          <NodeDistribution />
+          {activeMenu === "hashRate" && <HashRate />}
+          {activeMenu === "nodeDistribution" && <NodeDistribution />}
+          {activeMenu === "miningPools" && <MiningPools />}
+          {activeMenu === "clients" && <Clients />}
+          {activeMenu === "governance" && <Governance />}
+          {activeMenu === "binance" && <Binance />}
+          {activeMenu === "bitcoin" && <Bitcoin />}
+          {activeMenu === "ethereum" && <Ethereum />}
+          {activeMenu === "solana" && <Solana />}
+          {activeMenu === "dogecoin" && <Dogecoin />}
         </Grid.Column>
       </Grid>
 

@@ -12,6 +12,7 @@ import Bitcoin from './CryptoCurrencies/Bitcoin';
 import Ethereum from './CryptoCurrencies/Ethereum';
 import Solana from './CryptoCurrencies/Solana';
 import Dogecoin from './CryptoCurrencies/Dogecoin';
+import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -34,6 +35,7 @@ function App() {
           {activeMenu === "ethereum" && <Ethereum />}
           {activeMenu === "solana" && <Solana />}
           {activeMenu === "dogecoin" && <Dogecoin />}
+          {activeMenu === "exchangeShare" && <ExchangeTradingShare />}
         </Grid.Column>
       </Grid>
 

@@ -64,7 +64,7 @@ function Bitcoin() {
                         <p style={style.font}>
                             Bitcoin's history, the number of miners initially grew steadily, yet in 2014, it surged exponentially, peaking at an all-time high of 3,598 unique miners. However, this figure sharply declined, stabilizing around 23 today. This decline can be traced back to the escalating initial and ongoing expenses associated with operating a mining pool, impacting the participation and sustainability of individual miners.
                         </p>
-                        <Header as={'h3'} content='Node Geography' />
+                        <Header as={'h3'} content='Node Distribution' />
                         <p style={style.font}>
                             For Bitcoin, the highest number of nodes in the Europe region is 615 located in the United Kingdom. This accounts for over 21% of the total number of nodes in Europe. Likewise, 16 nodes in South Africa account for over 61% of the nodes in Africa. The US has 1261 nodes, which is over 98% of the total nodes in North America. In Asia, Japan has the largest number of nodes 549, 33% of the number of nodes. All nodes in the Oceania region are located in New Zealand. Likewise, all nodes in South America are located in Paraguay.
                         </p>

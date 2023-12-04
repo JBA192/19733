@@ -143,26 +143,22 @@ function About() {
                         <p style={style.font}>
                             <List ordered>
                                 <List.Item>
-                                    Data Layer: Describes how data is stored within the blockchain architecture.
-                                </List.Item>
-                                <List.Item>
-                                    Network Layer:
-                                    Dictates the process of sharing data among diverse network participants.
+                                    Application Layer:
+                                    Beyond incentive and consensus operations, the blockchain's computational capabilities extend to diverse applications, including cryptocurrencies and decentralized applications (DApps).
                                 </List.Item>
                                 <List.Item>
                                     Consensus Layer:
                                     Focuses on achieving unanimity within the network regarding a single perspective on shared data.
                                 </List.Item>
                                 <List.Item>
-                                    Incentive Layer:
-                                    In public blockchains, consensus is attained by motivating honest participants through an incentive mechanism.
+                                    Network Layer:
+                                    Dictates the process of sharing data among diverse network participants.
                                 </List.Item>
                                 <List.Item>
-                                    Contract Layer:
-                                    Involves the execution of computational scripts to perform both incentive and consensus operations.
-                                </List.Item><List.Item>
-                                    Application Layer:
-                                    Beyond incentive and consensus operations, the blockchain's computational capabilities extend to diverse applications, including cryptocurrencies and decentralized applications (DApps).
+                                    Data Layer: Describes how data is stored within the blockchain architecture.
+                                </List.Item>
+                                <List.Item>
+                                    Hardware/Infrastructure Layer
                                 </List.Item>
                             </List>
                         </p>

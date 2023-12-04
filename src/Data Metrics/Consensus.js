@@ -66,13 +66,31 @@ function Consensus() {
                 </p>
             </Card>
             <Card fluid style={style.card}>
-            <TableauComponent link="https://public.tableau.com/shared/93S672HHJ?:display_count=n&:origin=viz_share_link" />
+                <TableauComponent link="https://public.tableau.com/shared/93S672HHJ?:display_count=n&:origin=viz_share_link" />
             </Card>
             <Card fluid style={style.card}>
+                <Table celled size="large">
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell />
+                            <Table.HeaderCell content='Ethereum' />
+                            <Table.HeaderCell content='Binance' />
+                            <Table.HeaderCell content='Solana' />
+                        </Table.Row>
+                    </Table.Header>
+                    <Table.Body>
+                        <Table.Row>
+                            <Table.Cell content='Validators' />
+                            <Table.Cell content='886,207' />
+                            <Table.Cell content='40' />
+                            <Table.Cell content='1,983' />
+                        </Table.Row>
+                    </Table.Body>
+                </Table>
                 <List bulleted>
                     <List.Item style={style.font} content="Bitcoin's miner count initially increased but has since stabilized around 23 due to rising mining costs." />
-                    <List.Item style={style.font} content="Ethereum's miner count has steadily decreased since its launch, with around 36 miners remaining today." />
-                    <List.Item style={style.font} content="The declining miner counts in both Bitcoin and Ethereum could indicate a trend towards centralization." />
+                    <List.Item style={style.font} content="Ethereum Classic's miner count has steadily decreased since its launch, with around 36 miners remaining today." />
+                    <List.Item style={style.font} content="The declining miner counts in both Bitcoin and Ethereum(ETC) could indicate a trend towards centralization." />
                 </List>
             </Card>
             {/* Mining pools */}
@@ -102,7 +120,9 @@ function Consensus() {
                     <List.Item style={style.font} content="A significant concentration of mining power in the hands of a few major mining pools poses a threat to the decentralization of Bitcoin and Ethereum networks." />
                     <List.Item style={style.font} content="In Bitcoin, three mining pools control over 65% of the network's hash power, while in Ethereum, three pools command over 68%." />
                     <List.Item style={style.font} content="This concentration of mining power increases the risk of collusion, manipulation, and centralization, undermining the core principles of decentralization." />
+                    {/* <List.Item style={style.font} content="This behavior is also observed in proof-of-stake blockchains where few staking pools have majority of the shares." /> */}
                 </List>
+
             </Card>
         </div>
 

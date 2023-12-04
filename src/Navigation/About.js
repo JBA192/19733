@@ -107,9 +107,10 @@ function About() {
                         </Table.Row>
                     </Table.Body>
                 </Table>
-                <Header as={'h3'} content='Downsides of decentralization' />
+                <p></p>
                 <Grid columns={2}>
-                    <Grid.Column>
+                    <Grid.Column width={5}>
+                        <Header as={'h3'} content='Downsides of decentralization' />
                         <p style={style.font}>
                             <List bulleted>
                                 <List.Item>Cost</List.Item>
@@ -125,12 +126,6 @@ function About() {
                                 <List.Item>Mitigation of Conflicts of Interest</List.Item>
                                 <List.Item>Protection Against Manipulation</List.Item>
                                 <List.Item>Preservation of Ideals and Principles</List.Item>
-                            </List>
-                        </p>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <p style={style.font}>
-                            <List bulleted>
                                 <List.Item>Global Monetary Network</List.Item>
                                 <List.Item>Inclusivity and Financial Equality</List.Item>
                                 <List.Item>Response to Economic Inequality</List.Item>
@@ -139,8 +134,37 @@ function About() {
                                 <List.Item>Market Perception and Credibility</List.Item>
                             </List>
                         </p>
+                    </Grid.Column>
+                    <Grid.Column width={11}>
                         <p style={style.font}>
                             In summation, the measurement of decentralization emerges as an indispensable yardstick for evaluating the security, integrity, and alignment with principles in diverse systems, particularly those operating within the cryptocurrency and decentralized technology landscapes. It furnishes both a quantitative and qualitative foundation for assessing a system's efficacy in realizing its intended objectives.
+                        </p>
+                        <Header as={'h3'} content='Different Layers of Blockchain' />
+                        <p style={style.font}>
+                            <List ordered>
+                                <List.Item>
+                                    Data Layer: Describes how data is stored within the blockchain architecture.
+                                </List.Item>
+                                <List.Item>
+                                    Network Layer:
+                                    Dictates the process of sharing data among diverse network participants.
+                                </List.Item>
+                                <List.Item>
+                                    Consensus Layer:
+                                    Focuses on achieving unanimity within the network regarding a single perspective on shared data.
+                                </List.Item>
+                                <List.Item>
+                                    Incentive Layer:
+                                    In public blockchains, consensus is attained by motivating honest participants through an incentive mechanism.
+                                </List.Item>
+                                <List.Item>
+                                    Contract Layer:
+                                    Involves the execution of computational scripts to perform both incentive and consensus operations.
+                                </List.Item><List.Item>
+                                    Application Layer:
+                                    Beyond incentive and consensus operations, the blockchain's computational capabilities extend to diverse applications, including cryptocurrencies and decentralized applications (DApps).
+                                </List.Item>
+                            </List>
                         </p>
                     </Grid.Column>
                 </Grid>

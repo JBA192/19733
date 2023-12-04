@@ -1,10 +1,12 @@
 import React from 'react'
 import { Card, Grid, Header, Statistic } from "semantic-ui-react";
+import TableauComponent from '../TableauComponent';
 
 function Solana() {
     return (
-        <Grid columns={3}>
-            {/* <Grid.Column textAlign='center'>
+        <>
+            <Grid columns={3}>
+                {/* <Grid.Column textAlign='center'>
                 <Card fluid style={style.card}>
                     <Statistic horizontal style={style.statistics}>
                         <Statistic.Value >483.58</Statistic.Value>
@@ -13,23 +15,27 @@ function Solana() {
                     <Header as="h4" style={style.header}> Hash Rate </Header>
                 </Card>
             </Grid.Column> */}
-            <Grid.Column textAlign='center'>
-                <Card fluid style={style.card}>
-                    <Statistic size='small'>
-                        <Statistic.Value>23</Statistic.Value>
-                    </Statistic>
-                    <Header as="h4" style={style.header}>Nakamoto Coefficient</Header>
-                </Card>
-            </Grid.Column>
-            <Grid.Column textAlign='center'>
-                <Card fluid style={style.card}>
-                    <Statistic size='small'>
-                        <Statistic.Value>946</Statistic.Value>
-                    </Statistic>
-                    <Header as="h4" style={style.header}>Contributors</Header>
-                </Card>
-            </Grid.Column>
-        </Grid>
+                <Grid.Column textAlign='center'>
+                    <Card fluid style={style.card}>
+                        <Statistic size='small'>
+                            <Statistic.Value>23</Statistic.Value>
+                        </Statistic>
+                        <Header as="h4" style={style.header}>Nakamoto Coefficient</Header>
+                    </Card>
+                </Grid.Column>
+                <Grid.Column textAlign='center'>
+                    <Card fluid style={style.card}>
+                        <Statistic size='small'>
+                            <Statistic.Value>946</Statistic.Value>
+                        </Statistic>
+                        <Header as="h4" style={style.header}>Contributors</Header>
+                    </Card>
+                </Grid.Column>
+            </Grid>
+            <Card fluid style={style.card}>
+                <TableauComponent link={'https://public.tableau.com/shared/JKGK5CSKB?:display_count=n&:origin=viz_share_link'} />
+            </Card>
+        </>
     )
 }
 

@@ -1,7 +1,6 @@
-import { Card } from "semantic-ui-react";
 import TableauReport from "tableau-react";
 
-function NodeDistribution({link}) {
+function TableauComponent({link}) {
     return (
             <TableauReport
                 url={link}
@@ -10,4 +9,4 @@ function NodeDistribution({link}) {
 }
 
 
-export default NodeDistribution;
+export default TableauComponent;

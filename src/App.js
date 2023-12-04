@@ -14,6 +14,8 @@ import Solana from './CryptoCurrencies/Solana';
 import Dogecoin from './CryptoCurrencies/Dogecoin';
 import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 import ClientType from './Data Metrics/ClientType';
+import About from './Navigation/About';
+import UniqueMiners from './Data Metrics/UniqueMiners';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");

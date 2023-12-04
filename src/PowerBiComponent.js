@@ -2,7 +2,7 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import "./App.css"
 
-function PowerBiComponent({link}) {
+function PowerBIComponent({link}) {
     const reportClass = 'report-container';
     return (
        
@@ -44,4 +44,4 @@ function PowerBiComponent({link}) {
     );
 }
 
-export default PowerBiComponent;
+export default PowerBIComponent;

@@ -47,6 +47,13 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                             >
                                 <h5>Exchange Trading Share</h5>
                             </Menu.Item>
+                            <Menu.Item
+                                active={activeMenu === "developers"}
+                                name="developers"
+                                onClick={handleMenuClick}
+                            >
+                                <h5>No. of Developers</h5>
+                            </Menu.Item>
                         </Menu.Menu>
                     </Accordion.Content>
                     <Accordion.Title
@@ -115,7 +122,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         onClick={handleAccordionClick}
                     >
                         <Header as={"h4"} color={activeSection === 3 ? "yellow" : "grey"}>
-                            Government
+                            Hardware/Infrastructure
                         </Header>
                     </Accordion.Title>
                     <Accordion.Content
@@ -123,37 +130,6 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         style={style.contentBackground}
                     >
                         <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "hashRate"}
-                                name="hashRate"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>Hash Rate</h5>
-                            </Menu.Item>
-                        </Menu.Menu>
-                    </Accordion.Content>
-                    <Accordion.Title
-                        active={activeSection === 4}
-                        index={4}
-                        onClick={handleAccordionClick}
-                        style={style.accordionSoftwareStyle}
-                    >
-                        <Header as={"h4"} color={activeSection === 4 ? "yellow" : "grey"}>
-                            Software
-                        </Header>
-                    </Accordion.Title>
-                    <Accordion.Content
-                        active={activeSection === 4}
-                        style={style.contentBackground}
-                    >
-                        <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "developers"}
-                                name="developers"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>No. of Developers</h5>
-                            </Menu.Item>
                             <Menu.Item
                                 active={activeMenu === "clients"}
                                 name="clients"
@@ -178,6 +154,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                 </Menu.Header>
                 <Menu.Menu>
                     <Menu.Item
+                        active={activeMenu === "bitcoin"}
                         style={activeMenu === "bitcoin" ? style.color : { color: "grey" }}
                         name="bitcoin"
                         onClick={handleMenuClick}
@@ -185,6 +162,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         <h5>Bitcoin</h5>
                     </Menu.Item>
                     <Menu.Item
+                        active={activeMenu === "ethereum"}
                         style={activeMenu === "ethereum" ? style.color : { color: "grey" }}
                         name="ethereum"
                         onClick={handleMenuClick}
@@ -192,6 +170,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         <h5>Ethereum</h5>
                     </Menu.Item>
                     <Menu.Item
+                        active={activeMenu === "solana"}
                         style={activeMenu === "solana" ? style.color : { color: "grey" }}
                         name="solana"
                         onClick={handleMenuClick}
@@ -199,6 +178,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         <h5>Solana</h5>
                     </Menu.Item>
                     <Menu.Item
+                        active={activeMenu === "binance"}
                         style={activeMenu === "binance" ? style.color : { color: "grey" }}
                         name="binance"
                         onClick={handleMenuClick}

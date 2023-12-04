@@ -14,6 +14,7 @@ import Solana from './CryptoCurrencies/Solana';
 import Dogecoin from './CryptoCurrencies/Dogecoin';
 import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 import ClientType from './Data Metrics/ClientType';
+import UniqueMiners from './Data Metrics/UniqueMiners';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -38,6 +39,7 @@ function App() {
           {activeMenu === "dogecoin" && <Dogecoin />}
           {activeMenu === "exchangeShare" && <ExchangeTradingShare />}
           {activeMenu === "clientType" && <ClientType />}
+          {activeMenu === "uniqueMiners" && <UniqueMiners />}
         </Grid.Column>
       </Grid>
 

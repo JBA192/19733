@@ -15,6 +15,7 @@ import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 import ClientType from './Data Metrics/ClientType';
 import About from './Navigation/About';
 import Consensus from './Data Metrics/Consensus';
+import OS from './Data Metrics/OS';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -40,6 +41,7 @@ function App() {
           {activeMenu === "application" && <ExchangeTradingShare />}
           {activeMenu === "clientType" && <ClientType />}
           {activeMenu === "consensus" && <Consensus />}
+          {activeMenu === "os" && <OS />}
         </Grid.Column>
         <Grid.Column width={2}/>
         <Grid.Column width={13} textAlign='center'>

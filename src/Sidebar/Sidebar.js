@@ -72,6 +72,13 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                     >
                         <Menu.Menu>
                             <Menu.Item
+                                active={activeMenu === "os"}
+                                name="os"
+                                onClick={handleMenuClick}
+                            >
+                                <h5>OS</h5>
+                            </Menu.Item>
+                            <Menu.Item
                                 active={activeMenu === "clients"}
                                 name="clients"
                                 onClick={handleMenuClick}

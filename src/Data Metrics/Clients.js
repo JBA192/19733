@@ -12,7 +12,8 @@ function Clients() {
                 </Grid>
                 <br />
             <PowerBIComponent link="https://app.powerbi.com/view?r=eyJrIjoiN2ExMGQyMTktZTNiZi00NjE4LWI1NTktY2M5OGViNzAzOWY0IiwidCI6ImUzNmVlMzhmLTkxYjgtNGRjYS05YjEzLWNhYTUzNjBjOTcxNCIsImMiOjF9" />
-            <PowerBIComponent link="https://app.powerbi.com/view?r=eyJrIjoiYmY2MTMyYzAtNjljZS00YjM1LWExZmQtZTIyOTk2YjEyZjgxIiwidCI6ImUzNmVlMzhmLTkxYjgtNGRjYS05YjEzLWNhYTUzNjBjOTcxNCIsImMiOjF9" />
+            Binance
+            <PowerBIComponent link="https://app.powerbi.com/view?r=eyJrIjoiYzYyZGIwZjMtYTQzZS00OWY0LWFiMGUtYjZiNjFlZDUyMzQ1IiwidCI6ImUzNmVlMzhmLTkxYjgtNGRjYS05YjEzLWNhYTUzNjBjOTcxNCIsImMiOjF9" />
         </Card>
 
     )

@@ -1,11 +1,18 @@
 import React from 'react'
-import { Card } from "semantic-ui-react";
+import { Card, Grid, Header } from "semantic-ui-react";
 import PowerBIComponent from '../PowerBiComponent'
 
 function ClientType() {
     return (
         <Card fluid style={style.card}>
-            {/* <PowerBIComponent link="https://app.powerbi.com/reportEmbed?reportId=f3c5f67f-d729-4f6e-912b-b50a84a8b200&autoAuth=true&ctid=e36ee38f-91b8-4dca-9b13-caa5360c9714" /> */}
+            <Grid columns={2}>
+                <Grid.Column>
+                    <Header as ="h3">Client Type/Version</Header>
+                </Grid.Column>
+                </Grid>
+                <br />
+                Bitcoin
+            <PowerBIComponent link="https://app.powerbi.com/reportEmbed?reportId=f3c5f67f-d729-4f6e-912b-b50a84a8b200&autoAuth=true&ctid=e36ee38f-91b8-4dca-9b13-caa5360c9714" />
             Ethereum
             <PowerBIComponent link="https://app.powerbi.com/view?r=eyJrIjoiZjViZjY0YzktNTVkYy00NWUwLWE3M2UtMjYwYzJjMDYwYjc3IiwidCI6ImUzNmVlMzhmLTkxYjgtNGRjYS05YjEzLWNhYTUzNjBjOTcxNCIsImMiOjF9" />
             Binance

@@ -14,7 +14,6 @@ import Solana from './CryptoCurrencies/Solana';
 import Dogecoin from './CryptoCurrencies/Dogecoin';
 import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 import ClientType from './Data Metrics/ClientType';
-import UniqueMiners from './Data Metrics/UniqueMiners';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -27,6 +26,7 @@ function App() {
           <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         </Grid.Column>
         <Grid.Column width={13}>
+          {activeMenu === "about" && <About />}
           {activeMenu === "hashRate" && <HashRate />}
           {activeMenu === "nodeDistribution" && <NodeDistribution />}
           {activeMenu === "miningPools" && <MiningPools />}

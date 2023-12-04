@@ -154,21 +154,21 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                             >
                                 <h5>No. of Developers</h5>
                             </Menu.Item>
+                            <Menu.Item
+                                active={activeMenu === "clients"}
+                                name="clients"
+                                onClick={handleMenuClick}
+                            >
+                                <h5>Clients</h5>
+                            </Menu.Item>
+                            <Menu.Item
+                                active={activeMenu === "clientType"}
+                                name="clientType"
+                                onClick={handleMenuClick}
+                            >
+                                <h5>Client Type</h5>
+                            </Menu.Item>
                         </Menu.Menu>
-                        <Menu.Item
-                            active={activeMenu === "clients"}
-                            name="clients"
-                            onClick={handleMenuClick}
-                        >
-                            <h5>Clients</h5>
-                        </Menu.Item>
-                        <Menu.Item
-                            active={activeMenu === "clientType"}
-                            name="clientType"
-                            onClick={handleMenuClick}
-                        >
-                            <h5>Client Type</h5>
-                        </Menu.Item>
                     </Accordion.Content>
                 </Accordion>
             </Menu.Item>
@@ -178,28 +178,28 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                 </Menu.Header>
                 <Menu.Menu>
                     <Menu.Item
-                        style={activeMenu === "bitcoin" ? style.color : {color : "grey"}}
+                        style={activeMenu === "bitcoin" ? style.color : { color: "grey" }}
                         name="bitcoin"
                         onClick={handleMenuClick}
                     >
                         <h5>Bitcoin</h5>
                     </Menu.Item>
                     <Menu.Item
-                        style={activeMenu === "ethereum" ? style.color : {color : "grey"}}
+                        style={activeMenu === "ethereum" ? style.color : { color: "grey" }}
                         name="ethereum"
                         onClick={handleMenuClick}
                     >
                         <h5>Ethereum</h5>
                     </Menu.Item>
                     <Menu.Item
-                        style={activeMenu === "solana" ? style.color : {color : "grey"}}
+                        style={activeMenu === "solana" ? style.color : { color: "grey" }}
                         name="solana"
                         onClick={handleMenuClick}
                     >
                         <h5>Solana</h5>
                     </Menu.Item>
                     <Menu.Item
-                        style={activeMenu === "binance" ? style.color : {color : "grey"}}
+                        style={activeMenu === "binance" ? style.color : { color: "grey" }}
                         name="binance"
                         onClick={handleMenuClick}
                     >

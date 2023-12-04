@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div style={style.background}>
-      <Navigation activeMenu={activeMenu} setActiveMenu={setActiveMenu}/>
+      <Navigation activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       <Grid centered columns={2}>
         <Grid.Column width={2}>
           <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
@@ -30,7 +30,7 @@ function App() {
         <Grid.Column width={13}>
           {activeMenu === "about" && <About />}
           {activeMenu === "hashRate" && <HashRate />}
-          {activeMenu === "nodeDistribution" && <NodeDistribution />}
+          {activeMenu === "network" && <NodeDistribution />}
           {activeMenu === "miningPools" && <MiningPools />}
           {activeMenu === "clients" && <Clients />}
           {activeMenu === "governance" && <Governance />}
@@ -39,9 +39,13 @@ function App() {
           {activeMenu === "ethereum" && <Ethereum />}
           {activeMenu === "solana" && <Solana />}
           {activeMenu === "dogecoin" && <Dogecoin />}
-          {activeMenu === "exchangeShare" && <ExchangeTradingShare />}
+          {activeMenu === "application" && <ExchangeTradingShare />}
           {activeMenu === "clientType" && <ClientType />}
           {activeMenu === "uniqueMiners" && <UniqueMiners />}
+        </Grid.Column>
+        <Grid.Column width={2}/>
+        <Grid.Column width={13} textAlign='center'>
+          {activeMenu === 'paper' && <><img style={style.qr} src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.overleaf.com%2Fread%2Fcwxymgxgqqvz%23065146&chs=180x180&choe=UTF-8&chld=L|2" /></>}
         </Grid.Column>
       </Grid>
 
@@ -52,6 +56,11 @@ function App() {
 const style = {
   background: {
     backgroundColor: "rgba(0,0,0,0.04)"
+  },
+  qr: {
+    margin: "10% 0 15% 0",
+    width: "400px",
+    height: "400px"
   }
 }
 

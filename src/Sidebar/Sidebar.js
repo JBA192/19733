@@ -4,6 +4,7 @@ import { Sidebar, Menu, Header, Accordion } from "semantic-ui-react";
 function SidebarComponent({ activeMenu, setActiveMenu }) {
     const [activeSection, setActiveSection] = useState(undefined);
     const handleMenuClick = (_, { name }) => {
+        setActiveSection(undefined);
         setActiveMenu(name);
     };
 
@@ -26,13 +27,23 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                     <h3>Metrics</h3>
                 </Menu.Header>
                 <Accordion>
+                    <Menu.Menu>
+                        <Menu.Item
+                            name='application'
+                            onClick={handleMenuClick}
+                        >
+                            <Header as={"h4"} color={activeMenu === 'application' ? "yellow" : "grey"}>
+                                Application
+                            </Header>
+                        </Menu.Item>
+                    </Menu.Menu>
                     <Accordion.Title
                         active={activeSection === 0}
                         index={0}
                         onClick={handleAccordionClick}
                     >
                         <Header as={"h4"} color={activeSection === 0 ? "yellow" : "grey"}>
-                            Application
+                            Consensus
                         </Header>
                     </Accordion.Title>
                     <Accordion.Content
@@ -40,43 +51,6 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         style={style.contentBackground}
                     >
                         <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "exchangeShare"}
-                                name="exchangeShare"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>Exchange Trading Share</h5>
-                            </Menu.Item>
-                            <Menu.Item
-                                active={activeMenu === "developers"}
-                                name="developers"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>No. of Developers</h5>
-                            </Menu.Item>
-                        </Menu.Menu>
-                    </Accordion.Content>
-                    <Accordion.Title
-                        active={activeSection === 1}
-                        index={1}
-                        onClick={handleAccordionClick}
-                    >
-                        <Header as={"h4"} color={activeSection === 1 ? "yellow" : "grey"}>
-                            Consensus
-                        </Header>
-                    </Accordion.Title>
-                    <Accordion.Content
-                        active={activeSection === 1}
-                        style={style.contentBackground}
-                    >
-                        <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "nakamoto"}
-                                name="nakamoto"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>Nakamoto Coefficient</h5>
-                            </Menu.Item>
                             <Menu.Item
                                 active={activeMenu === "uniqueMiners"}
                                 name="uniqueMiners"
@@ -93,40 +67,27 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                             </Menu.Item>
                         </Menu.Menu>
                     </Accordion.Content>
+                    <Menu.Menu>
+                        <Menu.Item
+                            name='network'
+                            onClick={handleMenuClick}
+                        >
+                            <Header as={"h4"} color={activeMenu === 'network' ? "yellow" : "grey"}>
+                                Network
+                            </Header>
+                        </Menu.Item>
+                    </Menu.Menu>
                     <Accordion.Title
-                        active={activeSection === 2}
-                        index={2}
+                        active={activeSection === 1}
+                        index={1}
                         onClick={handleAccordionClick}
                     >
-                        <Header as={"h4"} color={activeSection === 2 ? "yellow" : "grey"}>
-                            Network
-                        </Header>
-                    </Accordion.Title>
-                    <Accordion.Content
-                        active={activeSection === 2}
-                        style={style.contentBackground}
-                    >
-                        <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "nodeDistribution"}
-                                name="nodeDistribution"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>Node Distribution</h5>
-                            </Menu.Item>
-                        </Menu.Menu>
-                    </Accordion.Content>
-                    <Accordion.Title
-                        active={activeSection === 3}
-                        index={3}
-                        onClick={handleAccordionClick}
-                    >
-                        <Header as={"h4"} color={activeSection === 3 ? "yellow" : "grey"}>
+                        <Header as={"h4"} color={activeSection === 1 ? "yellow" : "grey"}>
                             Hardware/Infrastructure
                         </Header>
                     </Accordion.Title>
                     <Accordion.Content
-                        active={activeSection === 3}
+                        active={activeSection === 1}
                         style={style.contentBackground}
                     >
                         <Menu.Menu>
@@ -147,7 +108,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                         </Menu.Menu>
                     </Accordion.Content>
                 </Accordion>
-            </Menu.Item>
+            </Menu.Item >
             <Menu.Item>
                 <Menu.Header>
                     <h3>Cryptocurrencies</h3>
@@ -187,7 +148,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                     </Menu.Item>
                 </Menu.Menu>
             </Menu.Item>
-        </Sidebar>
+        </Sidebar >
     );
 }
 

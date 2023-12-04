@@ -178,28 +178,28 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                 </Menu.Header>
                 <Menu.Menu>
                     <Menu.Item
-                        active={activeMenu === "bitcoin"}
+                        style={activeMenu === "bitcoin" ? style.color : {color : "grey"}}
                         name="bitcoin"
                         onClick={handleMenuClick}
                     >
                         <h5>Bitcoin</h5>
                     </Menu.Item>
                     <Menu.Item
-                        active={activeMenu === "ethereum"}
+                        style={activeMenu === "ethereum" ? style.color : {color : "grey"}}
                         name="ethereum"
                         onClick={handleMenuClick}
                     >
                         <h5>Ethereum</h5>
                     </Menu.Item>
                     <Menu.Item
-                        active={activeMenu === "solana"}
+                        style={activeMenu === "solana" ? style.color : {color : "grey"}}
                         name="solana"
                         onClick={handleMenuClick}
                     >
                         <h5>Solana</h5>
                     </Menu.Item>
                     <Menu.Item
-                        active={activeMenu === "binance"}
+                        style={activeMenu === "binance" ? style.color : {color : "grey"}}
                         name="binance"
                         onClick={handleMenuClick}
                     >
@@ -223,11 +223,8 @@ const style = {
         textAlign: "end",
     },
     contentBackground: {
-        backgroundColor: "#75767550",
-    },
-    accordionSoftwareStyle: {
-        paddingBottom: "15px",
-    },
-};
+        backgroundColor: "#75767550"
+    }
+}
 
 export default SidebarComponent;

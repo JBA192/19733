@@ -37,36 +37,16 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                             </Header>
                         </Menu.Item>
                     </Menu.Menu>
-                    <Accordion.Title
-                        active={activeSection === 0}
-                        index={0}
-                        onClick={handleAccordionClick}
+                    <Menu.Menu>
+                        <Menu.Item
+                        name="consensus"
+                        onClick={handleMenuClick}
                     >
-                        <Header as={"h4"} color={activeSection === 0 ? "yellow" : "grey"}>
+                        <Header as={"h4"} color={activeMenu === 'consensus' ? "yellow" : "grey"}>
                             Consensus
                         </Header>
-                    </Accordion.Title>
-                    <Accordion.Content
-                        active={activeSection === 0}
-                        style={style.contentBackground}
-                    >
-                        <Menu.Menu>
-                            <Menu.Item
-                                active={activeMenu === "uniqueMiners"}
-                                name="uniqueMiners"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>No. of Unique Miners</h5>
-                            </Menu.Item>
-                            <Menu.Item
-                                active={activeMenu === "miningPools"}
-                                name="miningPools"
-                                onClick={handleMenuClick}
-                            >
-                                <h5>Mining Pool Concentration</h5>
-                            </Menu.Item>
-                        </Menu.Menu>
-                    </Accordion.Content>
+                    </Menu.Item>
+                    </Menu.Menu>
                     <Menu.Menu>
                         <Menu.Item
                             name='network'

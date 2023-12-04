@@ -6,7 +6,6 @@ import NodeDistribution from './Data Metrics/NodeDistribution';
 import Clients from './Data Metrics/Clients';
 import Governance from './Data Metrics/Governance';
 import HashRate from './Data Metrics/HashRate';
-import MiningPools from './Data Metrics/MiningPools';
 import Binance from './CryptoCurrencies/Binance';
 import Bitcoin from './CryptoCurrencies/Bitcoin';
 import Ethereum from './CryptoCurrencies/Ethereum';
@@ -15,7 +14,7 @@ import Dogecoin from './CryptoCurrencies/Dogecoin';
 import ExchangeTradingShare from './Data Metrics/ExchangeTradingShare';
 import ClientType from './Data Metrics/ClientType';
 import About from './Navigation/About';
-import UniqueMiners from './Data Metrics/UniqueMiners';
+import Consensus from './Data Metrics/Consensus';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("about");
@@ -31,7 +30,6 @@ function App() {
           {activeMenu === "about" && <About />}
           {activeMenu === "hashRate" && <HashRate />}
           {activeMenu === "network" && <NodeDistribution />}
-          {activeMenu === "miningPools" && <MiningPools />}
           {activeMenu === "clients" && <Clients />}
           {activeMenu === "governance" && <Governance />}
           {activeMenu === "binance" && <Binance />}
@@ -41,11 +39,11 @@ function App() {
           {activeMenu === "dogecoin" && <Dogecoin />}
           {activeMenu === "application" && <ExchangeTradingShare />}
           {activeMenu === "clientType" && <ClientType />}
-          {activeMenu === "uniqueMiners" && <UniqueMiners />}
+          {activeMenu === "consensus" && <Consensus />}
         </Grid.Column>
         <Grid.Column width={2}/>
         <Grid.Column width={13} textAlign='center'>
-          {activeMenu === 'paper' && <><img style={style.qr} src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.overleaf.com%2Fread%2Fcwxymgxgqqvz%23065146&chs=180x180&choe=UTF-8&chld=L|2" /></>}
+          {activeMenu === 'paper' && <><img style={style.qr} alt="link to paper qr-code" src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.overleaf.com%2Fread%2Fcwxymgxgqqvz%23065146&chs=180x180&choe=UTF-8&chld=L|2" /></>}
         </Grid.Column>
       </Grid>
 

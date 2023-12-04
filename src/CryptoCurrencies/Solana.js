@@ -6,15 +6,14 @@ function Solana() {
     return (
         <>
             <Grid columns={3}>
-                {/* <Grid.Column textAlign='center'>
-                <Card fluid style={style.card}>
-                    <Statistic horizontal style={style.statistics}>
-                        <Statistic.Value >483.58</Statistic.Value>
-                        <Statistic.Label>EH/s</Statistic.Label>
-                    </Statistic>
-                    <Header as="h4" style={style.header}> Hash Rate </Header>
-                </Card>
-            </Grid.Column> */}
+                <Grid.Column textAlign='center'>
+                    <Card fluid style={style.card}>
+                        <Statistic size='small'>
+                            <Statistic.Value>1,983</Statistic.Value>
+                        </Statistic>
+                        <Header as="h4" style={style.header}>Validators</Header>
+                    </Card>
+                </Grid.Column>
                 <Grid.Column textAlign='center'>
                     <Card fluid style={style.card}>
                         <Statistic size='small'>

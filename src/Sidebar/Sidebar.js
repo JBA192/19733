@@ -90,7 +90,7 @@ function SidebarComponent({ activeMenu, setActiveMenu }) {
                                 name="clientType"
                                 onClick={handleMenuClick}
                             >
-                                <h5>Client Type</h5>
+                                <h5>Client Type/Version</h5>
                             </Menu.Item>
                         </Menu.Menu>
                     </Accordion.Content>

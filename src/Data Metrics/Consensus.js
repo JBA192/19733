@@ -69,24 +69,6 @@ function Consensus() {
                 <TableauComponent link="https://public.tableau.com/shared/93S672HHJ?:display_count=n&:origin=viz_share_link" />
             </Card>
             <Card fluid style={style.card}>
-                <Table celled size="large">
-                    <Table.Header>
-                        <Table.Row>
-                            <Table.HeaderCell />
-                            <Table.HeaderCell content='Ethereum' />
-                            <Table.HeaderCell content='Binance' />
-                            <Table.HeaderCell content='Solana' />
-                        </Table.Row>
-                    </Table.Header>
-                    <Table.Body>
-                        <Table.Row>
-                            <Table.Cell content='Validators' />
-                            <Table.Cell content='886,207' />
-                            <Table.Cell content='40' />
-                            <Table.Cell content='1,983' />
-                        </Table.Row>
-                    </Table.Body>
-                </Table>
                 <List bulleted>
                     <List.Item style={style.font} content="Bitcoin's miner count initially increased but has since stabilized around 23 due to rising mining costs." />
                     <List.Item style={style.font} content="Ethereum Classic's miner count has steadily decreased since its launch, with around 36 miners remaining today." />
